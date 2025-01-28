@@ -9,9 +9,7 @@ TEST_CASE("Sign is changed", "[Sign]") {
 	REQUIRE(Sign(-10) == 10);
 }
 
-// comment
-
-TEST_CASE("Double is added to each element", "AddN") {
+TEST_CASE("Double is added to each element", "[AddN]") {
 	std::vector<double> vec1 = {1, 1, 1, 1};
 	std::vector<double> test1 = AddN(vec1, 1.0);
 	std::vector<double> correct1 = {2, 2, 2, 2};
@@ -25,4 +23,14 @@ TEST_CASE("Double is added to each element", "AddN") {
 	for (int i = 0; i < (int)test2.size(); i++) {
 		REQUIRE(test2[i] == correct2[i]);
 	}
+}
+
+TEST_CASE("Sum is computed from std::vector", "[Sum]") {
+	std::vector<int> vec1 = {1, 1, 1, 1};
+	int sum1 = 4;
+	REQUIRE(Sum(vec1) == sum1);
+
+	std::vector<int> vec2 = {1, 2, 3, 4};
+	int sum2 = 10;
+	REQUIRE(Sum(vec2) == sum2);
 }
