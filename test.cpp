@@ -9,6 +9,8 @@ TEST_CASE("Sign is changed", "[Sign]") {
 	REQUIRE(Sign(-10) == 10);
 }
 
+// comment
+
 TEST_CASE("Double is added to each element", "AddN") {
 	std::vector<double> test1 = {1, 1, 1, 1};
 	std::vector<double> correct1 = {2, 2, 2, 2};
